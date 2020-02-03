@@ -9,7 +9,7 @@ The package can be installed by adding `tds_encoding` to your list of dependenci
 ```elixir
 def deps do
   [
-    {:tds_encoding, "~> 0.1.0"}
+    {:tds_encoding, "~> 1.0"}
   ]
 end
 ```
