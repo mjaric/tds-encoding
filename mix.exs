@@ -36,11 +36,12 @@ defmodule Tds.Encoding.MixProject do
 
   defp package do
     [
+      name: "tds_encoding",
       maintainers: ["Milan Jarić"],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/mjaric/tds-encoding"},
       files:
-        ~w(.formatter.exs mix.exs README.md lib)
+        ~w(.formatter.exs mix.exs README.md lib native)
     ]
   end
 end
