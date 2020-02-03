@@ -43,7 +43,7 @@ fn decode<'a>(env: Env<'a>, args: &[Term<'a>]) -> NifResult<Term<'a>> {
         Some(encoding) => {
             let in_binary : Binary = args[0].decode()?;
             let in_str = in_binary.to_owned().unwrap();
-            let res =  encoding.decode(in_str.as_slice(), DecoderTrap::Ignore).unwrap();
+            let res =  encoding.decode(in_str.as_slice(), DecoderTrap::Replace).unwrap();
             return Ok(res.encode(env))
         },
         None => return Err(Error::BadArg),

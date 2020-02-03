@@ -1,11 +1,10 @@
-# TdsEncoding
+# Tds.Encoding
 
-**TODO: Add description**
+String encoding/decoding NIF using rust [encoding](https://crates.io/crates/encoding) library.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `tds_encoding` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `tds_encoding` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -15,7 +14,5 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/tds_encoding](https://hexdocs.pm/tds_encoding).
-
+It requires rustc and cargo to compile. Easiest way to install required tools is 
+to use excellent [rustup](https://rustup.rs/) script.
