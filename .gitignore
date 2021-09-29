@@ -23,3 +23,5 @@ erl_crash.dump
 tds_encoding-*.tar
 
 /priv/native/
+
+/native/*/target
