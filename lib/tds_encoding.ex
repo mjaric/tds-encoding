@@ -31,10 +31,13 @@ defmodule Tds.Encoding do
 
       iex> Tds.Encoding.encode("¥₪ש", "windows-1255")
       <<0xA5, 0xA4, 0xF9>>
-      iex> Tds.Encoding.decode(<<0xA5, 0xA4, 0xF9>>, "windows-15")
+      iex> Tds.Encoding.decode(<<0xA5, 0xA4, 0xF9>>, "windows-1255")
       "¥₪ש"
   """
-  use Rustler, otp_app: :tds_encoding, crate: "tds_encoding"
+  use Rustler,
+    otp_app: :tds_encoding,
+    crate: "tds_encoding",
+    mode: if Mix.env() == :prod, do: :release, else: :debug
 
   @doc """
   Encodes utf-8 string using given codepage. If there are any unknown codes they
