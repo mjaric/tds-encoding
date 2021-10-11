@@ -9,8 +9,9 @@ defmodule Tds.Encoding.MixProject do
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      description: "String encoding/decoding NIF using rust [encoding](https://crates.io/crates/encoding) library",
-      package: package(),
+      description:
+        "String encoding/decoding NIF using rust [encoding](https://crates.io/crates/encoding) library",
+      package: package()
     ]
   end
 
@@ -25,7 +26,7 @@ defmodule Tds.Encoding.MixProject do
   defp deps do
     [
       {:rustler, "~> 0.22.0"},
-      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 
@@ -35,8 +36,7 @@ defmodule Tds.Encoding.MixProject do
       maintainers: ["Milan Jarić"],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/mjaric/tds-encoding"},
-      files:
-        ~w(.formatter.exs mix.exs README.md lib native)
+      files: ~w(.formatter.exs mix.exs README.md lib native)
     ]
   end
 end

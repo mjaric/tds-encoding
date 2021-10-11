@@ -16,6 +16,7 @@ defmodule TdsEncodingTest do
   test "should decode broken string and replace unkinwn with `�` code" do
     assert "\u{c6b0}\u{c640}\u{fffd}\u{c559}" ==
              decode(<<0xBF, 0xEC, 0xBF, 0xCD, 0xFF, 0xBE, 0xD3>>, "windows-949")
+
     # same encoding/decoding as above but ecoding name is different
     assert "\u{c6b0}\u{c640}\u{fffd}\u{c559}" ==
              decode(<<0xBF, 0xEC, 0xBF, 0xCD, 0xFF, 0xBE, 0xD3>>, "euc-kr")
