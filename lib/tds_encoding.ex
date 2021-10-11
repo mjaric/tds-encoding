@@ -37,7 +37,7 @@ defmodule Tds.Encoding do
   use Rustler,
     otp_app: :tds_encoding,
     crate: "tds_encoding",
-    mode: if Mix.env() == :prod, do: :release, else: :debug
+    mode: if(Mix.env() == :prod, do: :release, else: :debug)
 
   @doc """
   Encodes utf-8 string using given codepage. If there are any unknown codes they
